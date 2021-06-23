@@ -1,0 +1,59 @@
+
+
+<mat-toolbar class="titulo">
+    <button mat-mini-fab class="voltar" [routerLink]="['/produtos']"><mat-icon>arrow_back</mat-icon></button>
+    Editar produtos
+</mat-toolbar>
+
+<form [formGroup]="formulario" (ngSubmit)="salvarProduto()" autocomplete="off" > <!--autocomplete faz sugestão de preenchimento dos campos-->
+<mat-form-field color="primary" id="nome">
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="nome" placeholder="Nome do produto" required/>
+</mat-form-field>
+
+<mat-form-field color="primary" id="marca">
+    <mat-label>Marca</mat-label>
+    <input matInput formControlName="marca" placeholder="Marca do produto" required/>
+</mat-form-field>
+
+<!-- AQUI -->
+<mat-form-field color="primary" id="categoria">
+    <mat-label>Categoria</mat-label>
+    <input matInput formControlName="categoria" placeholder="Categoria do produto" required/>
+</mat-form-field>
+<!-- <mat-form-field color="primary" id="categoria">
+    <mat-label>Categoria</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let categoria of categoriasDaApi" [value]="categoria.categoria">
+            {{categoria.categoria}}
+        </mat-option>
+    </mat-select>
+</mat-form-field> -->
+<!-- ---- -->
+
+<mat-form-field color="primary" id="valorCompra">
+    <mat-label>Valor de compra</mat-label>
+    <input matInput formControlName="valorCompra" placeholder="R$ 00,00" required/>
+    <mat-hint>Somente números com ou sem <strong>ponto</strong></mat-hint>
+</mat-form-field>
+
+<mat-form-field color="primary" id="valorVenda">
+    <mat-label>Valor de venda</mat-label>
+    <input matInput formControlName="valorVenda" placeholder="R$ 00,00" required/>
+    <mat-hint>Somente números com ou sem <strong>ponto</strong></mat-hint>
+</mat-form-field>
+
+<mat-form-field color="primary" id="descricao">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput formControlName="descricao" placeholder="Descrição do produto" cols="2" rows="5"></textarea>
+</mat-form-field>
+
+<div>
+    <button class="submit" type="submit" mat-raised-button color="primary">Salvar</button>
+    <button class="reset" type="button" mat-raised-button color="warn" (click)="resetar()">Resetar</button>
+</div>
+
+</form>
+
+
+

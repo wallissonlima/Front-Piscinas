@@ -1,0 +1,121 @@
+/* form {
+    font-size: 14px;
+    width: 100%;
+} */
+.titulo {
+    color: #2d4d69;
+    background-color: transparent;
+    font-size: 30px;
+    cursor: default;
+}
+
+.mat-elevation-z4, .filtro {
+    margin: 0 15px;
+}
+
+mat-form-field {
+    min-width: auto;
+    max-width: 66%;
+    width: 88%;
+    font-size: 19px;
+    margin: auto;
+}
+
+.filtro {
+    margin-top: 0px;
+}
+
+.novo {
+    margin-top: 18px;
+    border-radius: 0;
+    background-color: #008000;
+    float: right;
+}
+
+.novo:hover {
+    background-color: #006300;
+}
+
+
+/*----- TABELA ------*/
+table {
+    width: 100%;
+}
+
+th {
+    background-color: #098ADA;
+    color: white;
+}
+
+tr {
+    transition: 0.3s;
+    cursor: default;
+}
+
+tr:hover {
+    background-color: lightskyblue;
+}
+
+.centro {
+    text-align: center;
+    cursor: default;
+}
+
+.edit {
+    color: #008000;
+}
+
+.delete {
+    color: #DA0000;
+}
+
+.icon-table {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.icon-table:hover {
+    color: #FFFFFF;
+}
+
+.mat-header-cell, .mat-cell {
+    padding: 0 8px;
+}
+
+.espacamento {
+    padding: 0;
+}
+
+/*----- PAGINAÇÃO ----- */
+/* mat-paginator {
+    width: 36%;
+    margin: auto;
+} */
+
+.modal-body {
+    border-radius: 0;
+    background-color: white;
+    font-size: 15px;
+}
+
+.modal-body button {
+    border-radius: 0;
+    margin: 0 5px;
+}
+
+.submit:hover {
+    background-color: #01518F;
+}
+
+.reset:hover {
+    background-color: #9C1111;
+}
+
+
+
+
+
+
+
+
+

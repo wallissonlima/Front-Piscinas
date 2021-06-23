@@ -1,0 +1,22 @@
+<div class="corpo">
+    <mat-toolbar class="titulo">
+        <button mat-mini-fab class="voltar" [routerLink]="['/categorias']"><mat-icon>arrow_back</mat-icon></button>
+        Editar categorias
+    </mat-toolbar>
+
+    <form [formGroup]="formulario" (ngSubmit)="salvarCategoria()" autocomplete="off" > <!--autocomplete faz sugestão de preenchimento dos campos-->
+
+        <mat-form-field color="primary" id="categoria">
+            <mat-label>Categoria</mat-label>
+            <input matInput formControlName="categoria" placeholder="Categoria do produto" required/>
+        </mat-form-field>
+
+        <div>
+            <button class="submit" type="submit" mat-raised-button color="primary">Salvar</button>
+            <button class="reset" type="button" mat-raised-button color="warn" (click)="resetar()">Resetar</button>
+        </div>
+
+    </form>
+</div>
+
+

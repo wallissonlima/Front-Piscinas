@@ -1,0 +1,36 @@
+<mat-sidenav-container>
+    <!-- Lateral -->
+    <mat-sidenav mode="push" [(opened)]="opened"> <!--attr.role="dialog"-->
+      <mat-toolbar class="lateral">Menu</mat-toolbar>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="['/clientes']">
+            Clientes <mat-icon class="icone">people</mat-icon>
+          </a>
+          <a mat-list-item [routerLink]="['/fornecedores']">
+            Fornecedores <mat-icon class="icone">local_shipping</mat-icon>
+          </a>
+          <a mat-list-item [routerLink]="['/produtos']">
+            Produtos <i class="icone fas fa-boxes"></i>
+          </a>
+          <a mat-list-item [routerLink]="['/categorias']">
+            Categorias <mat-icon class="icone">category</mat-icon>
+          </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <!-- Principal -->
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <mat-icon (click)="opened=!opened" class="botao">view_headline</mat-icon>
+        <div class="centro">
+          <i class="titulo-img fas fa-umbrella-beach"></i>
+          <span class="titulo">Oásis Piscinas</span>
+        </div>
+      </mat-toolbar>
+      <!-- Add Content Here -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  
+  
+  

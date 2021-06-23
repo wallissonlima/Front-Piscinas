@@ -1,0 +1,86 @@
+/* ----- CORPO ----- */
+
+mat-sidenav-container {
+    height: 100%;
+  }
+  
+  mat-sidenav {
+    border: none;
+    width: 200px;
+    background-image: linear-gradient(-290deg, #355C7D 27.3%, #FFFFFF 20.2% );
+    border-right: 1px solid #000000;
+  }
+  
+  mat-sidenav .lateral {
+    background-image: linear-gradient(#000000, #000000);
+    color: #FFFFFF;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  
+  mat-toolbar {
+    background-image: linear-gradient( 89.7deg,  #000000 -10.7%, #355C7D 88.8% );
+    padding: 0;
+  }
+  
+  mat-sidenav-content {
+    background-color: #f8f8f8;
+  }
+  
+  /* ----- MENU ----- */
+  
+  mat-nav-list a{
+    transition: 0.3s;
+  }
+  
+  mat-nav-list a:visited {
+    background-color: #FFFFFF;
+  }
+  
+  mat-nav-list a:hover {
+    background-color: #355C7D;
+    color: #FFFFFF;
+  }
+  
+  .icone {
+    margin-left: auto;
+  }
+  /* ----- BARRA-TITULO ----- */
+  .botao {
+    color: #C2C2C2;
+    cursor: pointer;
+    transition: 0.6s;
+    height: 100%;
+    width: 63px;
+    font-size: 62px;
+  }
+  
+  .botao:hover {
+    background-color: #FFFFFF;
+    color: #000;
+  }
+  
+  .centro {
+    text-align: center;
+    width: 90.58%;
+  }
+  
+  .titulo-img {
+    margin:0 16px;
+    background-image: linear-gradient( 91.9deg,  #098ADA 27.8%, #FFFFFF 70% );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+  }
+  
+  .titulo {
+    font-size: 1.2em;
+      font-family: 'Fredericka the Great', cursive;
+      background: linear-gradient(-140deg, #FFFFFF 3%, #36B7F3 60%, #098ADA 100%);
+      font-weight: bolder; 
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: default;
+  }
+  
+  

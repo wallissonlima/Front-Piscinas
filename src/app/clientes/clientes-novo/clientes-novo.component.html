@@ -1,0 +1,95 @@
+<mat-toolbar class="titulo">
+    <button mat-mini-fab class="voltar" [routerLink]="['/clientes']"><mat-icon>arrow_back</mat-icon></button>
+    Cadastro de clientes
+</mat-toolbar>
+
+<form [formGroup]="formulario" (ngSubmit)="salvarCliente()" autocomplete="off" > <!--autocomplete faz sugestão de preenchimento dos campos-->
+    
+    <mat-form-field color="primary" id="nome">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome" placeholder="Nome do cliente" required/>
+    </mat-form-field>
+
+    <mat-form-field color="primary" id="email">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email" placeholder="E-mail do cliente" required/>
+    </mat-form-field>
+
+    <mat-form-field color="primary" id="cpf">
+        <mat-label>CPF</mat-label>
+        <input matInput #cpf formControlName="cpf" placeholder="Ex: 99988877766" required/> <!--[textMask]="{mask: cpfMask, guide: false}"-->
+        <mat-hint>Somente números</mat-hint>
+    <mat-hint align="end">{{cpf.value.length}} / 11</mat-hint>
+
+    </mat-form-field>
+
+    <mat-form-field color="primary" id="celular">
+        <mat-label>Celular</mat-label>
+        <input matInput #celular formControlName="celular" placeholder="Ex: 61988887777" required/> <!--[textMask]="{mask: celularMask, guide: false}""-->
+        <mat-hint>DDD + número e celular. Somente números</mat-hint>
+    <mat-hint align="end">{{celular.value.length}} / 11</mat-hint>
+
+    </mat-form-field>
+
+    <mat-form-field color="primary" id="cep">
+        <mat-label>CEP</mat-label>
+        <input matInput #cep formControlName="cep" (blur)="consultaCEP()" placeholder="00000-000" required/> <!--[textMask]="{mask: cepMask, guide: false}"-->
+        <mat-hint align="start">CEP com traço</mat-hint>
+    <mat-hint align="end">{{cep.value.length}} / 9</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field color="primary" id="logradouro">
+        <mat-label>Logradouro</mat-label>
+        <input matInput formControlName="logradouro" placeholder="Ex: 2ª Avenida, lote 287" required/>
+    </mat-form-field>
+
+    <mat-form-field color="primary" id="bairro">
+        <mat-label>Bairro</mat-label>
+        <input matInput formControlName="bairro" placeholder="Ex: Asa Norte" required/>
+    </mat-form-field>
+
+    <mat-form-field color="primary" id="cidade">
+        <mat-label>Cidade</mat-label>
+        <input matInput formControlName="cidade" placeholder="Ex: Brasília" required/>
+    </mat-form-field>
+
+    <mat-form-field color="primary" id="uf">
+        <mat-label>UF</mat-label>
+        <input matInput formControlName="uf" placeholder="Ex: DF" required/>
+    </mat-form-field>
+
+    <div>
+        <button class="submit" type="submit" mat-raised-button color="primary">Cadastrar</button>
+        <button class="reset" type="button" mat-raised-button color="warn" (click)="resetar()">Resetar</button>
+    </div>
+
+</form>
+
+
+
+<!-- <form class="example-form">
+
+    <mat-form-field color="primary" id="email">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email" [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="E-mail do cliente"/>
+        <mat-hint>Errors appear instantly!</mat-hint>
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </form> -->
